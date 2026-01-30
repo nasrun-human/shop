@@ -294,7 +294,6 @@ app.post('/api/ai/chat', async (req, res) => {
 });
 
 // Serve static files from the React frontend app
-const distPath = path.join(__dirname, '../dist');
 if (fs.existsSync(distPath)) {
   app.use(express.static(distPath));
   app.get('*', (req, res) => {
